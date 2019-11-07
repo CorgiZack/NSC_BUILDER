@@ -734,6 +734,8 @@ echo Input "7"  to enter into FILE-JOINER mode
 echo Input "8"  to enter into COMPRESSOR\DECOMPRESSOR mode
 echo Input "9"  to enter into FILE-RESTORATION mode
 REM echo Input "10" to enter into FILE-MANAGEMENT mode
+REM Fixing the obvious need to exit the program from here
+echo Input "e"  to EXIT
 echo Input "0"  to enter into CONFIGURATION mode
 echo.
 echo Input "L" to enter LEGACY MODES
@@ -751,6 +753,8 @@ if /i "%bs%"=="7" goto JOINmode
 if /i "%bs%"=="8" goto ZSTDmode
 if /i "%bs%"=="9" goto RSTmode
 REM if /i "%bs%"=="10" goto MNGmode
+REM This is me adding in that exit stuff
+if /i "%bs%"=="E" goto salida
 if /i "%bs%"=="L" goto LegacyMode
 if /i "%bs%"=="0" goto OPT_CONFIG
 goto manual_Reentry
